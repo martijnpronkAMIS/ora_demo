@@ -1,0 +1,7 @@
+/.vagrant
+.byebug_history
+/.librarian
+/.tmp
+/modules/software/files/*.zip
+.DS_Store
+/vm-scripts/puppet-enterprise-2017.3.4-el-7-x86_64

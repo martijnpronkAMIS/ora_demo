@@ -1,0 +1,11 @@
+---
+role: role::oracledb::simple_db
+
+ora_profile::database::db_patches::patch_file: p6880880_122010_Linux-x86-64
+ora_profile::database::db_patches::opversion:  12.2.0.1.13
+ora_profile::database::db_patches::patch_list:      
+   "%{lookup('ora_profile::database::oracle_home')}:27468969":
+    source:              "%{lookup('ora_profile::database::source')}/p27468969_122010_Linux-x86-64.zip"
+    sub_patches:         [27674384,27464465]
+    
+ora_profile::database::db_software::database_type: EE

@@ -1,0 +1,8 @@
+You need to place the Oracle binaries in this directory.
+
+The folowing files are required:
+linuxx64_12201_database.zip (http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index.html)
+p6880880_122010_Linux-x86-64.zip (download from My Oracle Support: Latest OPatch release for Oracle 12.2)
+
+In addition, you can download the latest RU, the example contain the correct patch numbers from below patch: 
+p27468969_122010_Linux-x86-64.zip 
