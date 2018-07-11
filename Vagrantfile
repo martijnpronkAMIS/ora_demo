@@ -26,7 +26,8 @@ cat > /etc/hosts<< "EOF"
 EOF
 EOD
     srv.vm.provision :shell, inline: 'ln -f -s /usr/share/zoneinfo/Europe/Amsterdam /etc/localtime'
-    srv.vm.provision :shell, inline: 'yum install -y /vagrant/vm-scripts/puppet-enterprise-2017.3.4-el-7-x86_64/packages/el-7-x86_64/puppet-agent-5.3.4-1.el7.x86_64.rpm'
+    srv.vm.provision :shell, inline: 'rpm -Uvh https://yum.puppet.com/puppet5/puppet5-release-el-7.noarch.rpm'
+	srv.vm.provision :shell, inline: 'yum -y install puppet-agent'
 	
     srv.vm.provision :shell, path: 'vm-scripts/setup_puppet.sh'
     srv.vm.provision :shell, inline: 'puppet apply /etc/puppetlabs/code/environments/production/manifests/site.pp  --verbose --trace'

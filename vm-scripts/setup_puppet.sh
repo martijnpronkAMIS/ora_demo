@@ -2,7 +2,8 @@
 # Install librarian puppet. We need this to download the correct set of puppet modules
 #
 echo 'Installing required gems'
-/opt/puppetlabs/puppet/bin/gem install activesupport:4.2.7.1 librarian-puppet awesome_print --no-rdoc --no-ri
+/opt/puppetlabs/puppet/bin/gem install activesupport librarian-puppet awesome_print --no-document
+
 yum install git unzip net-tools -y
 
 echo 'Installing required puppet modules'
@@ -10,6 +11,8 @@ cd /vagrant
 cp -r Puppetfile manifests /etc/puppetlabs/code/environments/production
 ln -s /vagrant/modules/* /etc/puppetlabs/code/environments/production/modules/
 cd /etc/puppetlabs/code/environments/production
+
+export PATH=$PATH:/opt/puppetlabs/bin
 
 /opt/puppetlabs/puppet/bin/librarian-puppet install --verbose
 
