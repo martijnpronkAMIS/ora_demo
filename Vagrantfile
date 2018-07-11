@@ -4,8 +4,7 @@ VAGRANTFILE_API_VERSION = '2'.freeze
 
 # Read YAML file with box details
 servers = YAML.load_file('servers.yaml')
-pe_puppet_user_id  = 495
-pe_puppet_group_id = 496
+
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.ssh.insert_key = false
