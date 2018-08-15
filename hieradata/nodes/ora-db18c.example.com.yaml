@@ -1,0 +1,8 @@
+---
+role: role::oracledb::simple_db
+    
+ora_profile::database::db_software::database_type: EE
+ora_profile::database::db_software::file_name: LINUX.X64_180000_db_home
+ora_profile::database::version: 18.0.0.0
+ora_profile::database::db_patches: skip
+

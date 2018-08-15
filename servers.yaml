@@ -5,3 +5,9 @@ ora-db122:
   cpucount:         2
   box:              generic/centos7
   virtualboxorafix: enable  
+
+ora-db18c:
+  public_ip:        '192.168.253.18'
+  cpucount:         2
+  box:              generic/centos7
+  virtualboxorafix: enable 
